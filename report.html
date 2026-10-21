@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Report an Item | FindIt</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a class="logo" href="index.html"><span class="logo-mark">F</span> FindIt</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a class="active" href="report.html">Report Lost</a>
+        <a href="items.html">View Items</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <section class="page-intro container">
+      <p class="eyebrow">HELP THE COMMUNITY</p>
+      <h1>Report an item</h1>
+      <p>Share a few details so someone can recognise their missing belonging.</p>
+    </section>
+    <section class="form-layout container">
+      <div class="form-card">
+        <form id="reportForm">
+          <div class="form-row">
+            <div class="field"><label for="itemName">Item name <span>*</span></label><input id="itemName" name="itemName" type="text" placeholder="e.g. Black wallet" required /></div>
+            <div class="field"><label for="status">Report type <span>*</span></label><select id="status" name="status" required><option value="">Choose one</option><option value="Lost">I lost an item</option><option value="Found">I found an item</option></select></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="category">Category <span>*</span></label><select id="category" name="category" required><option value="">Select category</option><option>Electronics</option><option>Wallet / ID Card</option><option>Books & Stationery</option><option>Bags</option><option>Keys</option><option>Clothing</option><option>Other</option></select></div>
+            <div class="field"><label for="date">Date lost/found <span>*</span></label><input id="date" name="date" type="date" required /></div>
+          </div>
+          <div class="field"><label for="location">Location <span>*</span></label><input id="location" name="location" type="text" placeholder="e.g. University library" required /></div>
+          <div class="field"><label for="description">Description <span>*</span></label><textarea id="description" name="description" rows="4" placeholder="Add colour, brand or other helpful details..." required></textarea></div>
+          <div class="field"><label for="image">Item photo (optional)</label><input id="image" name="image" type="file" accept="image/*" /><small class="field-hint">Demo note: image files are not uploaded to a server in this basic version.</small></div>
+          <div class="form-row">
+            <div class="field"><label for="contactName">Your name <span>*</span></label><input id="contactName" name="contactName" type="text" placeholder="Your name" required /></div>
+            <div class="field"><label for="contact">Contact detail <span>*</span></label><input id="contact" name="contact" type="text" placeholder="Email or phone (demo)" required /></div>
+          </div>
+          <div class="form-actions"><button class="btn btn-primary" type="submit">Submit Report →</button><button class="btn btn-light" type="reset">Clear Form</button></div>
+          <p id="formMessage" class="form-message" role="status"></p>
+        </form>
+      </div>
+      <aside class="tip-card"><div class="tip-icon">💡</div><h2>Helpful tips</h2><ul><li>Use a clear item name.</li><li>Add the place where it was lost or found.</li><li>Do not share sensitive information publicly.</li><li>Meet in a safe, public place when returning an item.</li></ul><div class="tip-callout">Your report will appear in the items list on this demo website.</div></aside>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="logo" href="index.html"><span class="logo-mark">F</span> FindIt</a><p>Helping lost things find their way home.</p><span>© 2026 FindIt Student Project</span></div></footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
